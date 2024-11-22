@@ -1,0 +1,183 @@
+/* Google Fonts Embed for Montserrat and Fraunces */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Fraunces:wght@700&display=swap');
+
+/* Color Variables */
+:root {
+    /* Colors */
+    --color-dark-cyan: hsl(158, 36%, 37%);
+    --color-cream: hsl(30, 38%, 92%);
+    --color-very-dark-blue: hsl(212, 21%, 14%);
+    --color-dark-grayish-blue: hsl(228, 12%, 48%);
+    --color-white: hsl(0, 0%, 100%);
+
+    /* Font Family Variables */
+    --font-family-montserrat: 'Montserrat', sans-serif;
+    --font-family-fraunces: 'Fraunces', serif;
+
+    /* Font Weights */
+    --font-weight-regular: 500;
+    --font-weight-bold: 700;
+
+    /* Font Size Variables with clamp() for scalability */
+    --font-size-paragraph: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+    /* Scales from 14px to 16px */
+    --font-size-heading-small: clamp(1.125rem, 1.5vw + 1rem, 1.375rem);
+    /* Scales from 18px to 22px */
+    --font-size-heading-medium: clamp(1.375rem, 2vw + 1rem, 1.75rem);
+    /* Scales from 22px to 28px */
+    --font-size-heading-large: clamp(1.75rem, 2.5vw + 1.25rem, 2.25rem);
+    /* Scales from 28px to 36px */
+    --font-size-heading-xlarge: clamp(2rem, 3vw + 1.5rem, 3rem);
+    /* Scales from 32px to 48px */
+}
+
+/* Global Box-Sizing */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in element's width/height */
+}
+
+/* Basic Typography Reset */
+body {
+    font-family: inherit;
+    /* Inherit font family from root */
+    line-height: 1.5;
+    /* Improve line height for readability */
+    text-align: left;
+    /* Set text alignment to left for consistency */
+}
+
+/* Remove default margin and padding for common elements */
+ul,
+ol {
+    list-style: none;
+    /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    /* Remove underlines */
+    color: inherit;
+    /* Make links inherit text color */
+}
+
+button,
+input,
+select,
+textarea {
+    background: none;
+    /* Remove background from form elements */
+    border: none;
+    /* Remove borders from form elements */
+    font-family: inherit;
+    /* Ensure form elements inherit font */
+    font-size: inherit;
+    /* Ensure form elements inherit font size */
+}
+
+table {
+    border-collapse: collapse;
+    /* Collapse borders in tables */
+    border-spacing: 0;
+    /* Remove spacing between table cells */
+}
+
+/* Images and Media */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    /* Remove inline-block space below images */
+    max-width: 100%;
+    /* Ensure media elements are responsive */
+    height: auto;
+    /* Maintain aspect ratio of media elements */
+}
+
+/* Form elements */
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    /* Ensure forms inherit font from root */
+    font-size: 100%;
+    /* Prevent font size issues in form elements */
+    background: transparent;
+    /* Remove background from inputs */
+}
+
+/* Remove default fieldset styles */
+fieldset {
+    border: none;
+    /* Remove borders from fieldset */
+    padding: 0;
+    /* Remove padding from fieldset */
+    margin: 0;
+    /* Remove margin from fieldset */
+}
+
+/* Remove default padding for blockquotes */
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure full-height elements are aligned properly */
+html,
+body {
+    min-height: 100%;
+    /* Ensure the page takes full height */
+    display: flex;
+    /* Flex layout for proper alignment */
+    flex-direction: column;
+    /* Align elements from top to bottom */
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Ensure no gap or unwanted space between inline-block elements */
+iframe {
+    display: block;
+    /* Remove inline-block behavior */
+}
+
+/* Reset for the document structure elements */
+header,
+footer,
+nav,
+section,
+article,
+aside,
+main,
+figure,
+figcaption {
+    display: block;
+    /* Ensure these elements are block-level */
+}
+
+/* Remove the default styles from HTML5 form controls */
+input[type="checkbox"],
+input[type="radio"] {
+    appearance: none;
+    /* Remove default styling */
+}
+
+/* Add a smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+    /* Enable smooth scrolling */
+}
