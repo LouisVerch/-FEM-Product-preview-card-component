@@ -17,8 +17,6 @@
     /* Font Weights */
     --font-weight-regular: 500;
     --font-weight-bold: 700;
-
-
 }
 
 /* Global Box-Sizing */
@@ -28,23 +26,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Ensure padding and border are included in element's width/height */
 }
 
 /* Remove default margin and padding for common elements */
 ul,
 ol {
     list-style: none;
-    /* Remove default list styles */
     padding: 0;
     margin: 0;
 }
 
 a {
     text-decoration: none;
-    /* Remove underlines */
     color: inherit;
-    /* Make links inherit text color */
 }
 
 button,
@@ -52,20 +46,14 @@ input,
 select,
 textarea {
     background: none;
-    /* Remove background from form elements */
     border: none;
-    /* Remove borders from form elements */
     font-family: inherit;
-    /* Ensure form elements inherit font */
     font-size: inherit;
-    /* Ensure form elements inherit font size */
 }
 
 table {
     border-collapse: collapse;
-    /* Collapse borders in tables */
     border-spacing: 0;
-    /* Remove spacing between table cells */
 }
 
 /* Images and Media */
@@ -75,11 +63,8 @@ video,
 canvas,
 svg {
     display: block;
-    /* Remove inline-block space below images */
     max-width: 100%;
-    /* Ensure media elements are responsive */
     height: auto;
-    /* Maintain aspect ratio of media elements */
 }
 
 /* Form elements */
@@ -88,21 +73,15 @@ button,
 select,
 textarea {
     font-family: inherit;
-    /* Ensure forms inherit font from root */
     font-size: 100%;
-    /* Prevent font size issues in form elements */
     background: transparent;
-    /* Remove background from inputs */
 }
 
 /* Remove default fieldset styles */
 fieldset {
     border: none;
-    /* Remove borders from fieldset */
     padding: 0;
-    /* Remove padding from fieldset */
     margin: 0;
-    /* Remove margin from fieldset */
 }
 
 /* Remove default padding for blockquotes */
@@ -118,32 +97,11 @@ blockquote {
     clear: both;
 }
 
-/* Ensure no gap or unwanted space between inline-block elements */
-iframe {
-    display: block;
-    /* Remove inline-block behavior */
-}
-
-/* Reset for the document structure elements */
-header,
-footer,
-nav,
-section,
-article,
-aside,
-main,
-figure,
-figcaption {
-    display: block;
-
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 /* Ensure full-height elements are aligned properly */
-html,
 body {
     min-height: 100vh;
     display: flex;
@@ -154,7 +112,7 @@ body {
 }
 
 .product__card {
-    margin: 1rem;
+    margin: 1.3rem 1rem;
     background-color: var(--color-white);
     border-radius: 4%;
 }
@@ -164,55 +122,59 @@ img {
 }
 
 .product__info {
-    padding: 1rem;
+    height: auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
 .product__type {
     text-transform: uppercase;
     letter-spacing: 0.3rem;
-    font-size: 0.7rem;
+    font-size: clamp(0.6rem, 2vw, 0.8rem);
+    /* Scalable font size with clamp */
     color: var(--color-dark-grayish-blue);
-    padding: 0.5rem 0;
 }
 
 .product__name {
     font-family: var(--font-family-fraunces);
     line-height: 1;
-    font-size: 1.8rem;
-    padding-bottom: 1rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    /* Scalable font size with clamp */
 }
 
 .product__desc {
-    font-size: 0.85rem;
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    /* Scalable font size with clamp */
     color: var(--color-dark-grayish-blue);
     line-height: 1.3;
     letter-spacing: 0.01rem;
 }
 
 .price {
-    margin-top: 1rem;
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: center;
-
 }
 
 .price__discount {
     font-family: var(--font-family-fraunces);
     line-height: 1.2;
-    font-size: 1.7rem;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    /* Scalable font size with clamp */
     color: var(--color-dark-cyan)
 }
 
 .old__price {
     text-decoration: line-through;
-    font-size: 0.7rem;
+    font-size: clamp(0.6rem, 2vw, 0.8rem);
+    /* Scalable font size with clamp */
     color: var(--color-dark-grayish-blue);
 }
 
 .container__cart {
-    margin-top: 1rem;
     width: 100%;
     border-radius: 0.6rem;
     display: flex;
@@ -229,12 +191,12 @@ img {
     cursor: pointer;
     background-color: var(--color-very-dark-blue);
     transition: 0.5s ease-in-out;
-
 }
 
 a {
     color: var(--color-white);
-    font-size: 0.75rem;
+    font-size: clamp(0.7rem, 2vw, 1rem);
+    /* Scalable font size with clamp */
 }
 
 @media screen and (min-width: 44em) {
@@ -246,7 +208,12 @@ a {
 
     .product__card {
         display: flex;
-        width: 44em;
+        max-width: 44em;
+    }
+
+    .product__info {
+        gap: 9.7%;
+        max-width: 50%;
     }
 
     img {
